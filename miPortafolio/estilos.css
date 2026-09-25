@@ -179,3 +179,82 @@ section h2{
     color: blue;
     font-weight: bold;
 }
+
+/* Formulario */
+
+form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input, 
+.campo textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.campo textarea{
+    resize: vertical;
+}
+
+forn button {
+    width: 100%;
+}
+
+/* Pie de página */
+
+footer{
+    text-align: center;
+    padding: 30px 20px;
+    background-color: black;
+    color: white;
+}
+
+footer p{
+    margin: 5px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+   
+    header h1{
+        font-size: 32px;
+    }
+
+    nav{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    section{
+        padding: 40px 20px;
+    }
+
+    .inicio-contenido h2{
+        font-size: 32px;
+    }
+
+    .seccion-sobre-mi-contenido{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-proyectos{
+        flex-direction: column;
+    }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet"href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -29,23 +29,25 @@
             <div class="seccion-contenido">
                 <h2> Hola soy Luz Alvarez</h2>
                 <p> Soy estudiante de TIID estoy aprendiendo a hacer mi pag web</p>
-                <a href=""class="boton"> Ver mis proyectos </a>
+                <a href="" class="boton"> Ver mis proyectos </a>
             </div>
         
         </section>
 
         <!-- Seccion sobre mí -->
-        <section>
-            <div>
+        <section class="seccion-sobre-mi">
                 <h2> Sobre mí </h2>
-            <div class="sobre-mi-contenido">
-              <img src="./" alt="">
-                <div>
-                <p> Algo sobre la imagen </p>
-                <p> En esta practica estoy aprendiendo HTML & CSS </p>
-                </div>
-            </div>
+
+            <div class="seccion-sobre-mi-contenido">
+              <img src="image.png" alt="">
+              
+              <div class="texto-sobre-mi" >
+                 <p> Algo sobre la imagen </p>
+                 <p> En esta práctica estoy aprendiendo HTML y CSS</p>
+              </div>
+           </div>
         </section>
+
         <!-- Seccion habilidades -->
         <section>
             <h2> Mis Habilidades </h2>
@@ -67,7 +69,7 @@
                 </article>
 
                 <article class="proyecto">
-                    <h3> Sistema de control y monitoreo de luz en una vivienda 2</h3>
+                    <h3> Sistema de control y monitoreo de luz en una vivienda 2 </h3>
                     <p> Descripción del proyecto </p>
                     <a href="">Ver proyecto</a>
                 </article>
@@ -76,30 +78,68 @@
 
         <!-- Contenido principal -->
          <section>
-            <h2> Contáctame </h2>
+            <h2> Contácto </h2>
 
-            <form action="">
-                <div>
-                    <label for="">Nombre:</label>
-                    <input type="text">
+            <form>
+                <div class="campo">
+                    <label for ="nombre">
+                        Nombre
+                    </label>
+                    <input 
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                    >
                 </div>
 
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="campo">
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+                    <input 
+                        type="text">
+                        id="email"
+                        name="email"
+                        placeholder="ejemplo@correo.com"
+                    >
+                </div>
+                
+                <div class="campo">
+                    <label for="mensaje">
+                        Mensaje:
+                    </label>
+
+                    <textarea 
+                        id="mensaje" 
+                        name="mensaje" 
+                        rows="5"
+                        placeholder="Escribe tu mensaje">
+                    </textarea>
                 </div>
 
-                <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
+                <button type="submit">
+                    Enviar
+                </button>
             
-                <button type="submit">Enviar</button>
             </form>
 
         </section>
 
     </main>
 
+    <!-- Pie de página -->
+    <footer>
+        <p>
+            2026 Mi portafolio web
+        </p>
+        
+        <p>
+            Práctica de Programación Web. Todos los derechos reservados.
+        </p>    
+    
+    </footer>
+
 </body>
+
 </html>
