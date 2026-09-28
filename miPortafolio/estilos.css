@@ -153,6 +153,14 @@ section h2{
     font-weight: bold;
 }
 
+.botones-habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
 /* seccion de proyectos */
 
 .contenedor-proyectos{
@@ -211,7 +219,7 @@ form{
     resize: vertical;
 }
 
-forn button {
+form button {
     width: 100%;
 }
 
@@ -245,7 +253,7 @@ footer p{
         padding: 40px 20px;
     }
 
-    .inicio-contenido h2{
+    .seccion-contenido h2{
         font-size: 32px;
     }
 
@@ -257,4 +265,11 @@ footer p{
     .contenedor-proyectos{
         flex-direction: column;
     }
+}
+
+#errorNombre,
+#errorEmail {
+    display: none;
+    color: red;
+    font-size: 14px;
 }

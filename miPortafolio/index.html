@@ -11,7 +11,10 @@
     <!-- aquí esta el encabezado -->
      <header>
     <h1>Mi Portafolio</h1>
-    <p>Bienvenido a mi sitio web personal.</p>
+    <p id="bienvenida">¡Hola! Bienvenido a mi Portafolio ahora con JS</p>
+    <button id="btnBienvenida">
+        Cambiar mensaje
+    </button>
 
      </header>
     <!-- aquí comienza la navegacion-->
@@ -57,6 +60,12 @@
                 <li>PacketTracert</li>
                 <li>Base de datos</li>
             </ul>
+             <div class="botones-habilidades">
+                <button id="btnColor">Cambiar Color</button>
+                <button id="btnFuente">Cambiar tipo de letra</button>
+                
+
+            </div>
         </section>     
         <!-- Seccion proyectos -->  
          <section>
@@ -80,7 +89,7 @@
          <section>
             <h2> Contácto </h2>
 
-            <form>
+            <form id="formulario" onsubmit="return validarFormulario()">
                 <div class="campo">
                     <label for ="nombre">
                         Nombre
@@ -98,7 +107,7 @@
                         Correo electrónico
                     </label>
                     <input 
-                        type="text">
+                        type="email"
                         id="email"
                         name="email"
                         placeholder="ejemplo@correo.com"
@@ -139,6 +148,8 @@
         </p>    
     
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
