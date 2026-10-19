@@ -5,7 +5,6 @@ require_once "conexion.php";
 $id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id = filter_input(INPUT_POST, "id", FILTER_VALIDATE_INT);
 
     $nombre = trim($_POST["nombre"] ?? "");
     $correo = trim($_POST["correo"] ?? "");
@@ -18,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $stmt = $conexion->prepare(
-        "UPDATE mensajes SET nombre = ?, correo = ?, mensaje = ? WHERE id = ?"
+        "UPDATE mensajes1 
+        SET nombre = ?, correo = ?, mensaje = ? 
+        WHERE id = ?"
+    
     );
     $stmt->bind_param("sssi", $nombre, $correo, $mensaje, $id);
 

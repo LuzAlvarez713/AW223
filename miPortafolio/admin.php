@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["borrar_id"])) {
     $id = filter_input(INPUT_POST, "borrar_id", FILTER_VALIDATE_INT);
 
     if ($id) {
-        $stmt = $conexion->prepare("DELETE FROM mensajes WHERE id = ?");
+        $stmt = $conexion->prepare("DELETE FROM mensajes1 WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $stmt->close();
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["borrar_id"])) {
 }
 
 $resultado = $conexion->query(
-    "SELECT * FROM mensajes ORDER BY fecha DESC"
+    "SELECT * FROM mensajes1 ORDER BY id DESC"
 );
 
 function h($texto) {
@@ -85,11 +85,10 @@ function h($texto) {
     <table class="admin-tabla">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Mensaje</th>
-                <th>Fecha</th>
+                <th>Fecha de recepción</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -97,11 +96,10 @@ function h($texto) {
         <?php if ($resultado && $resultado->num_rows > 0): ?>
             <?php while ($fila = $resultado->fetch_assoc()): ?>
                 <tr>
-                    <td><?= (int)$fila["id"] ?></td>
                     <td><?= h($fila["nombre"]) ?></td>
                     <td><?= h($fila["correo"]) ?></td>
                     <td><?= nl2br(h($fila["mensaje"])) ?></td>
-                    <td><?= h($fila["fecha"]) ?></td>
+                    <td><?= h($fila["timeStaps"]) ?></td>
                     <td>
                         <a class="accion editar"
                            href="editar.php?id=<?= (int)$fila["id"] ?>">
@@ -120,8 +118,7 @@ function h($texto) {
                 </tr>
             <?php endwhile; ?>
         <?php else: ?>
-            <tr>
-                <td colspan="6">Todavía no hay mensajes recibidos.</td>
+            <tr>                <td colspan="54">Todavía no hay mensajes recibidos.</td>
             </tr>
         <?php endif; ?>
         </tbody>

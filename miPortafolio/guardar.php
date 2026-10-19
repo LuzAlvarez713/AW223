@@ -15,7 +15,7 @@ if ($nombre === "" || !filter_var($correo, FILTER_VALIDATE_EMAIL) || $mensaje ==
     exit("Completa todos los campos correctamente. <a href='index.html#contacto'>Regresar</a>");
 }
 
-$sql = "INSERT INTO mensajes (nombre, correo, mensaje)
+$sql = "INSERT INTO mensajes1 (nombre, correo, mensaje)
         VALUES (?, ?, ?)";
 
 $stmt = $conexion->prepare($sql);
