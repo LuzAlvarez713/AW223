@@ -51,15 +51,39 @@ function h($texto) {
         .admin-tabla th { background: #e8e8f5; }
         .admin-tabla td { overflow-wrap: anywhere; }
         .accion {
-            display: inline-block;
-            padding: 7px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 110px;
+            height: 38px;
+            padding: 0;
             margin: 3px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
             text-decoration: none;
             border-radius: 5px;
-        }
-        .editar { background: #dce8ff; color: #173b80; }
-        .borrar { background: #ffe0e0; color: #8b1515; border: 0; cursor: pointer; }
-        .regreso { display: inline-block; margin: 20px 0; }
+            cursor: pointer;
+}
+
+         .editar {
+            background: #dce8ff;
+            color: #173b80;
+            border: 1px solid #dce8ff;
+}
+
+        .borrar {
+            background: #ffe0e0;
+            color: #8b1515;
+            border: 1px solid #ffe0e0;
+}
+
+        .admin-tabla td form {
+            display: inline;
+            margin: 0;
+            padding: 0;
+}
     </style>
 </head>
 <body>
@@ -71,13 +95,15 @@ function h($texto) {
 
 <main class="admin-contenedor">
     <?php if (isset($_GET["estado"])): ?>
-        <p>
-            <?php
-            if ($_GET["estado"] === "guardado") echo "Mensaje guardado correctamente.";
-            if ($_GET["estado"] === "borrado") echo "Mensaje eliminado.";
-            if ($_GET["estado"] === "actualizado") echo "Mensaje actualizado correctamente.";
-            ?>
-        </p>
+<script>
+    <?php if ($_GET["estado"] === "guardado"): ?>
+        alert("¡Mensaje guardado correctamente!");
+    <?php elseif ($_GET["estado"] === "actualizado"): ?>
+        alert("¡Actualización Exitosa!");
+    <?php elseif ($_GET["estado"] === "borrado"): ?>
+        alert("¡Mensaje eliminado correctamente!");
+    <?php endif; ?>
+</script>
     <?php endif; ?>
 
     <h2>Mensajes recibidos</h2>
@@ -103,7 +129,7 @@ function h($texto) {
                     <td>
                         <a class="accion editar"
                            href="editar.php?id=<?= (int)$fila["id"] ?>">
-                            ✏️ Editar
+                                Editar ✏️
                         </a>
 
                         <form method="POST"
@@ -111,7 +137,7 @@ function h($texto) {
                             <input type="hidden" name="borrar_id"
                                    value="<?= (int)$fila["id"] ?>">
                             <button class="accion borrar" type="submit">
-                                🗑️ Borrar
+                                Borrar🗑️ 
                             </button>
                         </form>
                     </td>
