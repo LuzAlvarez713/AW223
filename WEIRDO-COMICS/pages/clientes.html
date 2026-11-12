@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clientes | Weirdo Comics</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icono">W</div>
+
+                <div>
+                    <h2>WEIRDO</h2>
+                    <span>COMICS STORE</span>
+                </div>
+            </div>
+
+            <div class="menu-titulo">MENÚ DEL VENDEDOR</div>
+
+            <nav class="menu">
+
+                <a href="../index.html" class="menu-enlace">
+                    <span>▦</span> Inicio
+                </a>
+
+                <a href="clientes.html" class="menu-enlace activo">
+                    <span>♙</span> Clientes
+                </a>
+
+                <a href="consulta-productos.html" class="menu-enlace">
+                    <span>▣</span> Consulta de productos
+                </a>
+
+                <a href="ventas.html" class="menu-enlace">
+                    <span>🛒</span> Punto de venta
+                </a>
+
+                <a href="reportes-vendedor.html" class="menu-enlace">
+                    <span>▥</span> Mis reportes
+                </a>
+
+                <a href="perfil-vendedor.html" class="menu-enlace">
+                    <span>♙</span> Mi perfil
+                </a>
+
+            </nav>
+
+            <div class="menu-inferior">
+
+                <div class="menu-titulo">CUENTA</div>
+
+                <a href="login.html" class="menu-enlace">
+                    <span>↪</span> Cerrar sesión
+                </a>
+
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="avatar">V</div>
+
+                <div>
+                    <strong>Vendedor</strong>
+                    <small>Personal de ventas</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <header class="encabezado">
+
+                <div>
+                    <span class="subtitulo">GESTIÓN DE CLIENTES</span>
+
+                    <h1>Clientes</h1>
+
+                    <p>Consulta la información de tus clientes frecuentes.</p>
+                </div>
+
+                <div class="encabezado-derecha">
+
+                    <div class="fecha">📅 Noviembre 2026</div>
+
+                    <div class="perfil">
+                        <div class="avatar">V</div>
+
+                        <div>
+                            <strong>Vendedor</strong>
+                            <small>Personal de ventas</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- INDICADORES -->
+            <section class="indicadores">
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Clientes registrados</span>
+                        <div class="icono-tarjeta naranja">♙</div>
+                    </div>
+
+                    <h2>128</h2>
+                    <small>Clientes en el directorio</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Clientes frecuentes</span>
+                        <div class="icono-tarjeta verde">★</div>
+                    </div>
+
+                    <h2>36</h2>
+                    <small>Clientes recurrentes</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Compras realizadas</span>
+                        <div class="icono-tarjeta azul">▤</div>
+                    </div>
+
+                    <h2>245</h2>
+                    <small>Compras registradas</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Ventas acumuladas</span>
+                        <div class="icono-tarjeta morado">$</div>
+                    </div>
+
+                    <h2>$18,650</h2>
+                    <small>Total de compras</small>
+                </article>
+
+            </section>
+
+
+            <!-- TABLA DE CLIENTES -->
+            <section class="panel panel-clientes">
+
+                <div class="encabezado-clientes">
+
+                    <div>
+                        <h3>Directorio de clientes</h3>
+                        <p>Consulta las compras y datos de tus clientes.</p>
+                    </div>
+
+                    <span class="etiqueta">Clientes registrados</span>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                
+                <div class="buscador-clientes">
+
+                     <span>⌕</span>
+
+                   <input type="text"
+                        id="buscarCliente"
+                        placeholder="Buscar cliente por nombre o teléfono...">
+
+                    <button type="button" id="btnBuscarCliente">Buscar</button>
+
+                </div>
+
+
+
+                <!-- TABLA -->
+                <div class="tabla-contenedor">
+
+                    <table class="tabla-clientes">
+
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Teléfono</th>
+                                <th>Compras realizadas</th>
+                                <th>Total acumulado</th>
+                                <th>Última compra</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <strong>María González</strong>
+                                </td>
+                                <td>442 123 4567</td>
+                                <td>12</td>
+                                <td>$2,450.00</td>
+                                <td>09/11/2026</td>
+                                <td><span class="estado-cliente frecuente">Frecuente</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Carlos Ramírez</strong>
+                                </td>
+                                <td>442 234 5678</td>
+                                <td>8</td>
+                                <td>$1,850.00</td>
+                                <td>08/11/2026</td>
+                                <td><span class="estado-cliente frecuente">Frecuente</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Ana Martínez</strong>
+                                </td>
+                                <td>442 345 6789</td>
+                                <td>5</td>
+                                <td>$980.00</td>
+                                <td>07/11/2026</td>
+                                <td><span class="estado-cliente activo">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>José Hernández</strong>
+                                </td>
+                                <td>442 456 7890</td>
+                                <td>3</td>
+                                <td>$650.00</td>
+                                <td>05/11/2026</td>
+                                <td><span class="estado-cliente activo">Activo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Laura Sánchez</strong>
+                                </td>
+                                <td>442 567 8901</td>
+                                <td>1</td>
+                                <td>$250.00</td>
+                                <td>02/11/2026</td>
+                                <td><span class="estado-cliente nuevo">Nuevo</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="paginacion-clientes">
+                    <span>Mostrando 5 de 128 clientes</span>
+
+                    <div>
+                        <button type="button">Anterior</button>
+                        <button type="button" class="pagina-activa">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">Siguiente</button>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <footer class="pie">
+                © 2026 Weirdo Comics | Gestión de Clientes
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="../js/principal.js"></script>
+
+</body>
+</html>

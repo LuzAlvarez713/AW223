@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["borrar_id"])) {
     $id = filter_input(INPUT_POST, "borrar_id", FILTER_VALIDATE_INT);
 
     if ($id) {
-        $stmt = $conexion->prepare("DELETE FROM mensajes1 WHERE id = ?");
+        $stmt = $conexion->prepare("DELETE FROM portafolio WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $stmt->close();
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["borrar_id"])) {
 }
 
 $resultado = $conexion->query(
-    "SELECT * FROM mensajes1 ORDER BY id DESC"
+    "SELECT * FROM portafolio ORDER BY id DESC"
 );
 
 function h($texto) {

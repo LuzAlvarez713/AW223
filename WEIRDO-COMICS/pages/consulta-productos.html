@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consulta de Productos | Weirdo Comics</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icono">W</div>
+                <div>
+                    <h2>WEIRDO</h2>
+                    <span>COMICS STORE</span>
+                </div>
+            </div>
+
+            <div class="menu-titulo">MENÚ DEL VENDEDOR</div>
+
+            <nav class="menu">
+
+                <a href="../index.html" class="menu-enlace">
+                    <span>▦</span> Inicio
+                </a>
+
+                <a href="clientes.html" class="menu-enlace">
+                    <span>♙</span> Clientes
+                </a>
+
+                <a href="consulta-productos.html" class="menu-enlace activo">
+                    <span>▣</span> Consulta de productos
+                </a>
+
+                <a href="ventas.html" class="menu-enlace">
+                    <span>🛒</span> Punto de venta
+                </a>
+
+                <a href="reportes-vendedor.html" class="menu-enlace">
+                    <span>▥</span> Mis reportes
+                </a>
+
+                <a href="perfil-vendedor.html" class="menu-enlace">
+                    <span>♙</span> Mi perfil
+                </a>
+
+            </nav>
+
+            <div class="menu-inferior">
+                <div class="menu-titulo">CUENTA</div>
+
+                <a href="login.html" class="menu-enlace">
+                    <span>↪</span> Cerrar sesión
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="avatar">V</div>
+
+                <div>
+                    <strong>Vendedor</strong>
+                    <small>Personal de ventas</small>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <header class="encabezado">
+
+                <div>
+                    <span class="subtitulo">CATÁLOGO DE PRODUCTOS</span>
+
+                    <h1>Consulta de productos</h1>
+
+                    <p>Consulta los productos disponibles para realizar tus ventas.</p>
+                </div>
+
+                <div class="encabezado-derecha">
+
+                    <div class="fecha">📅 Noviembre 2026</div>
+
+                    <div class="perfil">
+                        <div class="avatar">V</div>
+
+                        <div>
+                            <strong>Vendedor</strong>
+                            <small>Personal de ventas</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- INDICADORES -->
+            <section class="indicadores">
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Productos registrados</span>
+                        <div class="icono-tarjeta naranja">▣</div>
+                    </div>
+
+                    <h2>256</h2>
+                    <small>Productos en catálogo</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Disponibles</span>
+                        <div class="icono-tarjeta verde">✓</div>
+                    </div>
+
+                    <h2>218</h2>
+                    <small>Productos con existencias</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Existencias bajas</span>
+                        <div class="icono-tarjeta azul">!</div>
+                    </div>
+
+                    <h2>24</h2>
+                    <small>Productos por agotarse</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Agotados</span>
+                        <div class="icono-tarjeta morado">×</div>
+                    </div>
+
+                    <h2>14</h2>
+                    <small>Sin existencias</small>
+                </article>
+
+            </section>
+
+
+            <!-- CATÁLOGO DE PRODUCTOS -->
+            <section class="panel">
+
+                <div class="encabezado-clientes">
+
+                    <div>
+                        <h3>Catálogo de productos</h3>
+                        <p>Busca y consulta los detalles y existencias de los productos.</p>
+                    </div>
+
+                    <span class="etiqueta">256 productos</span>
+
+                </div>
+
+
+                <!-- BUSCADOR Y FILTROS -->
+                <div class="filtros-productos">
+
+                    <div class="buscador-clientes">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="buscarProducto"
+                            placeholder="Buscar por nombre o código...">
+
+                        <button type="button" id="btnBuscarProducto">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                    <select id="filtroCategoria" aria-label="Filtrar por categoría">
+
+                        <option value="">Todas las categorías</option>
+                        <option value="comics">Cómics</option>
+                        <option value="manga">Manga</option>
+                        <option value="figuras">Figuras</option>
+                        <option value="accesorios">Accesorios</option>
+
+                    </select>
+
+                    <select id="filtroDisponibilidad" aria-label="Filtrar por disponibilidad">
+
+                        <option value="">Todos los estados</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="bajo">Existencias bajas</option>
+                        <option value="agotado">Agotado</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLA DE PRODUCTOS -->
+                <div class="tabla-contenedor">
+
+                    <table class="tabla-productos">
+
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Existencias</th>
+                                <th>Disponibilidad</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr data-categoria="comics" data-estado="disponible">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">🕷️</div>
+                                        <strong>Spider-Man #1</strong>
+                                    </div>
+                                </td>
+
+                                <td>COM-001</td>
+                                <td>Cómics</td>
+                                <td>$120.00</td>
+                                <td>35</td>
+                                <td><span class="estado disponible">Disponible</span></td>
+
+                            </tr>
+
+                            <tr data-categoria="comics" data-estado="disponible">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">🦇</div>
+                                        <strong>Batman: Año Uno</strong>
+                                    </div>
+                                </td>
+
+                                <td>COM-002</td>
+                                <td>Cómics</td>
+                                <td>$180.00</td>
+                                <td>18</td>
+                                <td><span class="estado disponible">Disponible</span></td>
+
+                            </tr>
+
+                            <tr data-categoria="manga" data-estado="bajo">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">🍥</div>
+                                        <strong>Naruto Vol. 1</strong>
+                                    </div>
+                                </td>
+
+                                <td>MAN-001</td>
+                                <td>Manga</td>
+                                <td>$150.00</td>
+                                <td>5</td>
+                                <td><span class="estado bajo">Existencias bajas</span></td>
+
+                            </tr>
+
+                            <tr data-categoria="manga" data-estado="disponible">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">⚡</div>
+                                        <strong>Dragon Ball Vol. 1</strong>
+                                    </div>
+                                </td>
+
+                                <td>MAN-002</td>
+                                <td>Manga</td>
+                                <td>$160.00</td>
+                                <td>22</td>
+                                <td><span class="estado disponible">Disponible</span></td>
+
+                            </tr>
+
+                            <tr data-categoria="figuras" data-estado="agotado">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">🦸</div>
+                                        <strong>Figura de Superman</strong>
+                                    </div>
+                                </td>
+
+                                <td>FIG-001</td>
+                                <td>Figuras</td>
+                                <td>$450.00</td>
+                                <td>0</td>
+                                <td><span class="estado agotado">Agotado</span></td>
+
+                            </tr>
+
+                            <tr data-categoria="accesorios" data-estado="disponible">
+
+                                <td>
+                                    <div class="producto-tabla">
+                                        <div class="producto-imagen">🎒</div>
+                                        <strong>Mochila Marvel</strong>
+                                    </div>
+                                </td>
+
+                                <td>ACC-001</td>
+                                <td>Accesorios</td>
+                                <td>$320.00</td>
+                                <td>12</td>
+                                <td><span class="estado disponible">Disponible</span></td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- PAGINACIÓN -->
+                <div class="paginacion-clientes">
+
+                    <span>Mostrando 6 de 256 productos</span>
+
+                    <div>
+                        <button type="button">Anterior</button>
+                        <button type="button" class="pagina-activa">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">Siguiente</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PIE DE PÁGINA -->
+            <footer class="pie">
+                © 2026 Weirdo Comics | Consulta de Productos
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/principal.js"></script>
+
+</body>
+</html>

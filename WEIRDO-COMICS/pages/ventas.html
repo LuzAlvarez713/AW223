@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Venta | Weirdo Comics</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icono">W</div>
+                <div>
+                    <h2>WEIRDO</h2>
+                    <span>COMICS STORE</span>
+                </div>
+            </div>
+
+            <div class="menu-titulo">MENÚ DEL VENDEDOR</div>
+
+            <nav class="menu">
+                <a href="../index.html" class="menu-enlace"><span>▦</span> Inicio</a>
+                <a href="clientes.html" class="menu-enlace"><span>♙</span> Clientes</a>
+                <a href="consulta-productos.html" class="menu-enlace"><span>▣</span> Consulta de productos</a>
+                <a href="ventas.html" class="menu-enlace activo"><span>🛒</span> Punto de venta</a>
+                <a href="reportes-vendedor.html" class="menu-enlace"><span>▥</span> Mis reportes</a>
+                <a href="perfil-vendedor.html" class="menu-enlace"><span>♙</span> Mi perfil</a>
+            </nav>
+
+            <div class="menu-inferior">
+                <div class="menu-titulo">CUENTA</div>
+                <a href="login.html" class="menu-enlace"><span>↪</span> Cerrar sesión</a>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="avatar">V</div>
+                <div>
+                    <strong>Vendedor</strong>
+                    <small>Personal de ventas</small>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <header class="encabezado">
+                <div>
+                    <span class="subtitulo">ÁREA DE VENTAS</span>
+                    <h1>Punto de venta</h1>
+                    <p>Selecciona productos y prepara el ticket de compra.</p>
+                </div>
+
+                <div class="encabezado-derecha">
+                    <div class="fecha">📅 Noviembre 2026</div>
+                    <div class="perfil">
+                        <div class="avatar">V</div>
+                        <div>
+                            <strong>Vendedor</strong>
+                            <small>Personal de ventas</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- INDICADORES -->
+            <section class="indicadores">
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Venta actual</span>
+                        <div class="icono-tarjeta naranja">$</div>
+                    </div>
+                    <h2 id="indicadorVenta">$490.00</h2>
+                    <small>Total de la compra actual</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Productos agregados</span>
+                        <div class="icono-tarjeta verde">▣</div>
+                    </div>
+                    <h2 id="indicadorProductos">4</h2>
+                    <small>Artículos en el carrito</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Cliente</span>
+                        <div class="icono-tarjeta azul">♙</div>
+                    </div>
+                    <h2 id="indicadorCliente">0</h2>
+                    <small>Cliente seleccionado</small>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-superior">
+                        <span>Ticket</span>
+                        <div class="icono-tarjeta morado">▤</div>
+                    </div>
+                    <h2>V-0012</h2>
+                    <small>Número de venta</small>
+                </article>
+
+            </section>
+
+            <!-- PUNTO DE VENTA -->
+            <section class="contenido-punto-venta">
+
+                <!-- CATÁLOGO -->
+                <div class="panel panel-punto-venta">
+
+                    <div class="encabezado-clientes">
+                        <div>
+                            <h3>Seleccionar productos</h3>
+                            <p>Busca y agrega productos a la venta.</p>
+                        </div>
+                        <span class="etiqueta">Catálogo</span>
+                    </div>
+
+                    <!-- BUSCADOR -->
+                    <div class="buscador-clientes buscador-venta">
+                        <span>⌕</span>
+                        <input type="text" id="buscarVenta"
+                            placeholder="Buscar producto o código...">
+                        <button type="button" id="btnBuscarVenta">Buscar</button>
+                    </div>
+
+                    <!-- CATEGORÍAS -->
+                    <div class="categorias-venta">
+                        <button type="button" class="categoria-activa" data-categoria="todos">Todos</button>
+                        <button type="button" data-categoria="comics">Cómics</button>
+                        <button type="button" data-categoria="manga">Manga</button>
+                        <button type="button" data-categoria="figuras">Figuras</button>
+                        <button type="button" data-categoria="accesorios">Accesorios</button>
+                    </div>
+
+                    <!-- PRODUCTOS -->
+                    <div class="productos-venta" id="catalogoVenta">
+
+                        <article class="producto-venta" data-categoria="comics"
+                            data-nombre="Spider-Man #1" data-codigo="COM-001" data-precio="120" data-stock="35">
+                            <div class="producto-imagen">🕷️</div>
+                            <div>
+                                <h4>Spider-Man #1</h4>
+                                <small>COM-001</small>
+                                <strong>$120.00</strong>
+                                <span>35 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" aria-label="Agregar Spider-Man">+</button>
+                        </article>
+
+                        <article class="producto-venta" data-categoria="comics"
+                            data-nombre="Batman: Año Uno" data-codigo="COM-002" data-precio="180" data-stock="18">
+                            <div class="producto-imagen">🦇</div>
+                            <div>
+                                <h4>Batman: Año Uno</h4>
+                                <small>COM-002</small>
+                                <strong>$180.00</strong>
+                                <span>18 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" aria-label="Agregar Batman">+</button>
+                        </article>
+
+                        <article class="producto-venta" data-categoria="manga"
+                            data-nombre="Naruto Vol. 1" data-codigo="MAN-001" data-precio="150" data-stock="5">
+                            <div class="producto-imagen">🍥</div>
+                            <div>
+                                <h4>Naruto Vol. 1</h4>
+                                <small>MAN-001</small>
+                                <strong>$150.00</strong>
+                                <span>5 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" aria-label="Agregar Naruto">+</button>
+                        </article>
+
+                        <article class="producto-venta" data-categoria="manga"
+                            data-nombre="Dragon Ball Vol. 1" data-codigo="MAN-002" data-precio="160" data-stock="22">
+                            <div class="producto-imagen">⚡</div>
+                            <div>
+                                <h4>Dragon Ball Vol. 1</h4>
+                                <small>MAN-002</small>
+                                <strong>$160.00</strong>
+                                <span>22 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" aria-label="Agregar Dragon Ball">+</button>
+                        </article>
+
+                        <article class="producto-venta" data-categoria="figuras"
+                            data-nombre="Figura de Superman" data-codigo="FIG-001" data-precio="450" data-stock="0">
+                            <div class="producto-imagen">🦸</div>
+                            <div>
+                                <h4>Figura de Superman</h4>
+                                <small>FIG-001</small>
+                                <strong>$450.00</strong>
+                                <span>0 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" disabled
+                                aria-label="Producto agotado">+</button>
+                        </article>
+
+                        <article class="producto-venta" data-categoria="accesorios"
+                            data-nombre="Mochila Marvel" data-codigo="ACC-001" data-precio="320" data-stock="12">
+                            <div class="producto-imagen">🎒</div>
+                            <div>
+                                <h4>Mochila Marvel</h4>
+                                <small>ACC-001</small>
+                                <strong>$320.00</strong>
+                                <span>12 disponibles</span>
+                            </div>
+                            <button type="button" class="btn-agregar" aria-label="Agregar mochila">+</button>
+                        </article>
+
+                    </div>
+
+                    <p id="mensajeCatalogo" class="aviso-venta" aria-live="polite"></p>
+
+                </div>
+
+                <!-- RESUMEN DE VENTA -->
+                <div class="panel panel-resumen-venta">
+
+                    <div class="encabezado-clientes">
+                        <div>
+                            <h3>Resumen de venta</h3>
+                            <p>Ticket de compra actual.</p>
+                        </div>
+                        <span class="etiqueta">V-0012</span>
+                    </div>
+
+                    <!-- CLIENTE -->
+                    <div class="datos-cliente-venta">
+                        <label for="cliente">Cliente</label>
+                        <select id="cliente">
+                            <option value="">Seleccionar cliente</option>
+                            <option value="María González">María González</option>
+                            <option value="Carlos Ramírez">Carlos Ramírez</option>
+                            <option value="Ana Martínez">Ana Martínez</option>
+                            <option value="José Hernández">José Hernández</option>
+                        </select>
+                    </div>
+
+                    <!-- CARRITO -->
+                    <div class="lista-carrito" id="listaCarrito" aria-live="polite">
+
+                        <div class="articulo-carrito">
+                            <div>
+                                <strong>Spider-Man #1</strong>
+                                <small>1 × $120.00</small>
+                            </div>
+                            <span>$120.00</span>
+                        </div>
+
+                        <div class="articulo-carrito">
+                            <div>
+                                <strong>Batman: Año Uno</strong>
+                                <small>1 × $180.00</small>
+                            </div>
+                            <span>$180.00</span>
+                        </div>
+
+                        <div class="articulo-carrito">
+                            <div>
+                                <strong>Naruto Vol. 1</strong>
+                                <small>1 × $150.00</small>
+                            </div>
+                            <span>$150.00</span>
+                        </div>
+
+                        <div class="articulo-carrito">
+                            <div>
+                                <strong>Bolsa de compra</strong>
+                                <small>1 × $40.00</small>
+                            </div>
+                            <span>$40.00</span>
+                        </div>
+
+                    </div>
+
+                    <!-- TOTALES -->
+                    <div class="totales-venta">
+
+                        <div>
+                            <span>Subtotal</span>
+                            <strong id="subtotalVenta">$422.41</strong>
+                        </div>
+
+                        <div>
+                            <span>IVA (16%)</span>
+                            <strong id="ivaVenta">$67.59</strong>
+                        </div>
+
+                        <div class="total-final-venta">
+                            <span>Total</span>
+                            <strong id="totalVenta">$490.00</strong>
+                        </div>
+
+                    </div>
+
+                    <!-- MÉTODO DE PAGO -->
+                    <div class="metodo-pago">
+                        <label for="pago">Método de pago</label>
+                        <select id="pago">
+                            <option value="">Seleccionar método</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Transferencia">Transferencia</option>
+                        </select>
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="botones-venta">
+                        <button type="button" class="boton-limpiar" id="btnLimpiarVenta">
+                            Limpiar venta
+                        </button>
+
+                        <button type="button" class="boton-cobrar" id="btnCobrarVenta">
+                            Cobrar $490.00
+                        </button>
+                    </div>
+
+                    <p class="aviso-venta" id="mensajeVenta" aria-live="polite">
+                        Los datos mostrados son de ejemplo.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <footer class="pie">
+                © 2026 Weirdo Comics | Punto de Venta
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="../js/principal.js"></script>
+
+</body>
+</html>

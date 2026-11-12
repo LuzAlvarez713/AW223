@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis reportes | Weirdo Comics</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="contenedor">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icono">W</div>
+            <div><h2>WEIRDO</h2><span>COMICS STORE</span></div>
+        </div>
+
+        <div class="menu-titulo">MENÚ DEL VENDEDOR</div>
+        <nav class="menu">
+            <a href="../index.html" class="menu-enlace"><span>▦</span> Inicio</a>
+            <a href="clientes.html" class="menu-enlace"><span>♙</span> Clientes</a>
+            <a href="consulta-productos.html" class="menu-enlace"><span>▣</span> Consulta de productos</a>
+            <a href="ventas.html" class="menu-enlace"><span>🛒</span> Punto de venta</a>
+            <a href="reportes-vendedor.html" class="menu-enlace activo"><span>▥</span> Mis reportes</a>
+            <a href="perfil-vendedor.html" class="menu-enlace"><span>♙</span> Mi perfil</a>
+        </nav>
+
+        <div class="menu-inferior">
+            <div class="menu-titulo">CUENTA</div>
+            <a href="login.html" class="menu-enlace"><span>↪</span> Cerrar sesión</a>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="avatar">V</div>
+            <div><strong>Vendedor</strong><small>Personal de ventas</small></div>
+        </div>
+    </aside>
+
+    <main class="contenido">
+
+        <header class="encabezado">
+            <div>
+                <span class="subtitulo">ÁREA DE VENTAS</span>
+                <h1>Mis reportes</h1>
+                <p>Consulta el resumen de tu actividad de ventas.</p>
+            </div>
+            <div class="encabezado-derecha">
+                <div class="fecha">📅 Noviembre 2026</div>
+                <div class="perfil">
+                    <div class="avatar">V</div>
+                    <div><strong>Vendedor</strong><small>Personal de ventas</small></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="filtros-reportes">
+            <div class="campo-reporte">
+                <label for="fechaInicio">Fecha inicial</label>
+                <input type="date" id="fechaInicio" value="2026-11-01">
+            </div>
+            <div class="campo-reporte">
+                <label for="fechaFin">Fecha final</label>
+                <input type="date" id="fechaFin" value="2026-11-30">
+            </div>
+            <button type="button" id="btnFiltrarReporte">Consultar</button>
+        </section>
+
+        <section class="indicadores indicadores-reportes">
+            <article class="tarjeta">
+                <div class="tarjeta-superior"><span>Ventas realizadas</span><div class="icono-tarjeta naranja">$</div></div>
+                <h2>$12,450.00</h2>
+                <small>Ventas acumuladas</small>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-superior"><span>Tickets generados</span><div class="icono-tarjeta verde">▤</div></div>
+                <h2>58</h2>
+                <small>Operaciones realizadas</small>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-superior"><span>Venta promedio</span><div class="icono-tarjeta azul">▥</div></div>
+                <h2>$214.66</h2>
+                <small>Promedio por ticket</small>
+            </article>
+            <article class="tarjeta">
+                <div class="tarjeta-superior"><span>Clientes atendidos</span><div class="icono-tarjeta morado">♙</div></div>
+                <h2>42</h2>
+                <small>Clientes registrados</small>
+            </article>
+        </section>
+
+        <section class="panel panel-reporte">
+            <div class="titulo-panel-reporte">
+                <div>
+                    <h3>Ventas por día</h3>
+                    <p>Resumen de ventas de ejemplo.</p>
+                </div>
+                <span class="etiqueta-reporte">Noviembre 2026</span>
+            </div>
+
+            <div class="grafica-reportes">
+                <div class="barra-grafica" style="height:45%"><span class="barra-valor">$900</span><small>Lun</small></div>
+                <div class="barra-grafica" style="height:75%"><span class="barra-valor">$1,500</span><small>Mar</small></div>
+                <div class="barra-grafica" style="height:60%"><span class="barra-valor">$1,200</span><small>Mié</small></div>
+                <div class="barra-grafica" style="height:90%"><span class="barra-valor">$1,800</span><small>Jue</small></div>
+                <div class="barra-grafica" style="height:55%"><span class="barra-valor">$1,100</span><small>Vie</small></div>
+                <div class="barra-grafica" style="height:100%"><span class="barra-valor">$2,000</span><small>Sáb</small></div>
+                <div class="barra-grafica" style="height:70%"><span class="barra-valor">$1,400</span><small>Dom</small></div>
+            </div>
+        </section>
+
+        <section class="panel panel-reporte">
+            <div class="titulo-panel-reporte">
+                <div><h3>Productos más vendidos</h3><p>Ejemplo de artículos con mayor movimiento.</p></div>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-reportes">
+                    <thead>
+                        <tr><th>Producto</th><th>Código</th><th>Unidades</th><th>Total vendido</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Spider-Man #1</td><td>COM-001</td><td>25</td><td>$3,000.00</td></tr>
+                        <tr><td>Batman: Año Uno</td><td>COM-002</td><td>18</td><td>$3,240.00</td></tr>
+                        <tr><td>Naruto Vol. 1</td><td>MAN-001</td><td>14</td><td>$2,100.00</td></tr>
+                        <tr><td>Dragon Ball Vol. 1</td><td>MAN-002</td><td>10</td><td>$1,600.00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="pie">© 2026 Weirdo Comics | Mis reportes</footer>
+    </main>
+</div>
+<script src="../js/principal.js"></script>
+</body>
+</html>

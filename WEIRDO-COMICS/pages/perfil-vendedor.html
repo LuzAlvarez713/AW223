@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil | Weirdo Comics</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="contenedor">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icono">W</div>
+            <div><h2>WEIRDO</h2><span>COMICS STORE</span></div>
+        </div>
+
+        <div class="menu-titulo">MENÚ DEL VENDEDOR</div>
+        <nav class="menu">
+            <a href="../index.html" class="menu-enlace"><span>▦</span> Inicio</a>
+            <a href="clientes.html" class="menu-enlace"><span>♙</span> Clientes</a>
+            <a href="consulta-productos.html" class="menu-enlace"><span>▣</span> Consulta de productos</a>
+            <a href="ventas.html" class="menu-enlace"><span>🛒</span> Punto de venta</a>
+            <a href="reportes-vendedor.html" class="menu-enlace"><span>▥</span> Mis reportes</a>
+            <a href="perfil-vendedor.html" class="menu-enlace activo"><span>♙</span> Mi perfil</a>
+        </nav>
+
+        <div class="menu-inferior">
+            <div class="menu-titulo">CUENTA</div>
+            <a href="login.html" class="menu-enlace"><span>↪</span> Cerrar sesión</a>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="avatar">V</div>
+            <div><strong>Vendedor</strong><small>Personal de ventas</small></div>
+        </div>
+    </aside>
+
+    <main class="contenido">
+
+        <header class="encabezado">
+            <div>
+                <span class="subtitulo">MI CUENTA</span>
+                <h1>Mi perfil</h1>
+                <p>Consulta y actualiza tus datos personales.</p>
+            </div>
+            <div class="encabezado-derecha">
+                <div class="fecha">📅 Noviembre 2026</div>
+                <div class="perfil">
+                    <div class="avatar">V</div>
+                    <div><strong>Vendedor</strong><small>Personal de ventas</small></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="perfil-presentacion">
+            <div class="perfil-avatar">V</div>
+            <div class="perfil-datos">
+                <h2>Vendedor</h2>
+                <p>Personal de ventas | Weirdo Comics</p>
+                <span class="perfil-estado">● Cuenta activa</span>
+            </div>
+        </section>
+
+        <section class="panel panel-configuracion">
+            <div class="titulo-configuracion">
+                <h3>Información personal</h3>
+                <p>Datos de ejemplo del usuario.</p>
+            </div>
+
+            <form id="formPerfil">
+                <div class="campos-configuracion">
+
+                    <div class="campo-configuracion">
+                        <label for="nombrePerfil">Nombre completo</label>
+                        <input type="text" id="nombrePerfil" value="Vendedor" required>
+                    </div>
+
+                    <div class="campo-configuracion">
+                        <label for="correoPerfil">Correo electrónico</label>
+                        <input type="email" id="correoPerfil" value="vendedor@weirdocomics.com" required>
+                    </div>
+
+                    <div class="campo-configuracion">
+                        <label for="telefonoPerfil">Teléfono</label>
+                        <input type="tel" id="telefonoPerfil" value="442 000 0000">
+                    </div>
+
+                    <div class="campo-configuracion">
+                        <label for="puestoPerfil">Puesto</label>
+                        <input type="text" id="puestoPerfil" value="Vendedor" readonly>
+                    </div>
+
+                    <div class="campo-configuracion">
+                        <label for="usuarioPerfil">Nombre de usuario</label>
+                        <input type="text" id="usuarioPerfil" value="vendedor01" readonly>
+                    </div>
+
+                    <div class="campo-configuracion">
+                        <label for="fechaPerfil">Fecha de registro</label>
+                        <input type="text" id="fechaPerfil" value="10/11/2026" readonly>
+                    </div>
+
+                </div>
+
+                <div class="botones-configuracion">
+                    <button type="reset" class="boton-limpiar">Restablecer</button>
+                    <button type="submit" class="boton-guardar-config">Guardar cambios</button>
+                </div>
+
+                <p id="mensajePerfil" class="aviso-configuracion" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel informacion-cuenta">
+            <h3>Información de la cuenta</h3>
+            <div class="dato-cuenta"><span>Identificador</span><strong>VEN-001</strong></div>
+            <div class="dato-cuenta"><span>Tipo de usuario</span><strong>Vendedor</strong></div>
+            <div class="dato-cuenta"><span>Estado</span><strong>Activo</strong></div>
+        </section>
+
+        <footer class="pie">© 2026 Weirdo Comics | Mi perfil</footer>
+    </main>
+</div>
+
+<script src="../js/principal.js"></script>
+</body>
+</html>

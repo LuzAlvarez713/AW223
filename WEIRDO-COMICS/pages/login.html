@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | Weirdo Comics</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f7f5f0;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .contenedor-login {
+            width: 100%;
+            max-width: 420px;
+            padding: 38px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo-login {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .logo-login h1 {
+            color: #e87538;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .logo-login p {
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .formulario-login label {
+            display: block;
+            margin: 16px 0 7px;
+            font-weight: 700;
+            color: #30333b;
+        }
+
+        .formulario-login input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 9px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .formulario-login input:focus {
+            border-color: #e87538;
+        }
+
+        .boton-login {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 9px;
+            background-color: #e87538;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .boton-login:hover {
+            background-color: #cf612a;
+        }
+
+        .mensaje-login {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .volver-inicio {
+            display: block;
+            margin-top: 22px;
+            text-align: center;
+            color: #e87538;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .volver-inicio:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .contenedor-login {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="contenedor-login">
+
+        <div class="logo-login">
+            <h1>Weirdo Comics</h1>
+            <p>Bienvenido al sistema de punto de venta</p>
+        </div>
+
+        <form class="formulario-login" id="formLogin">
+
+            <label for="usuario">Usuario</label>
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Ingresa tu usuario"
+                autocomplete="username"
+                required
+            >
+
+            <label for="contrasena">Contraseña</label>
+            <input
+                type="password"
+                id="contrasena"
+                placeholder="Ingresa tu contraseña"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit" class="boton-login">
+                Iniciar sesión
+            </button>
+
+            <p class="mensaje-login" id="mensajeLogin"></p>
+
+        </form>
+
+        <a href="../index.html" class="volver-inicio">
+            Volver al inicio
+        </a>
+
+    </main>
+
+    <script>
+        document.getElementById("formLogin").addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            const usuario = document.getElementById("usuario").value.trim();
+            const contrasena = document.getElementById("contrasena").value.trim();
+            const mensaje = document.getElementById("mensajeLogin");
+
+            if (usuario === "" || contrasena === "") {
+                mensaje.textContent = "Completa todos los campos.";
+                return;
+            }
+
+            if (usuario === "vendedor01" && contrasena === "demo123") {
+                mensaje.textContent = "Inicio de sesión de demostración correcto.";
+
+                setTimeout(function() {
+                    window.location.href = "../index.html";
+                }, 800);
+
+            } else {
+                mensaje.textContent = "Usuario o contraseña incorrectos.";
+            }
+        });
+    </script>
+
+</body>
+</html>
