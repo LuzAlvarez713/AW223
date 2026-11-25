@@ -1,14 +1,12 @@
 from flask import Flask
 
-app = Flask(__name__)
+from controllers.controladorAlumno import controladorAlumnoBP
 
-@app.route('/')
-def Inicio():
-    return "Hola Mundo  Flask!"
+def create_app():
+    app= Flask(__name__)
+    app.register_blueprint(controladorAlumnoBP)
+    return app
 
-@app.route('/soyotraruta')
-def otra():
-    return "esta es la dirección de otra ruta"
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__=='__main__':
+    app=create_app()
+    app.run(port=5000,debug=True)
